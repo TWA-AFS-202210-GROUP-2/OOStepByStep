@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Microsoft Managed Recommended Rules" Description="These rules focus on the most critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. It is recommended to include this rule set in any custom rule set you create for your projects." ToolsVersion="10.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Microsoft Managed Recommended Rules" Description="These rules focus on the most critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. It is recommended to include this rule set in any custom rule set you create for your projects." ToolsVersion="17.0">
   <Localization ResourceAssembly="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.dll" ResourceBaseName="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.Localized">
     <Name Resource="MinimumRecommendedRules_Name" />
     <Description Resource="MinimumRecommendedRules_Description" />
@@ -39,7 +39,6 @@
     <Rule Id="SA1201" Action="Error" />
     <Rule Id="SA1202" Action="Error" />
     <Rule Id="SA1203" Action="Error" />
-    <Rule Id="SA1204" Action="Warning" />
     <Rule Id="SA1208" Action="None" />
     <Rule Id="SA1209" Action="Error" />
     <Rule Id="SA1210" Action="None" />
@@ -67,8 +66,8 @@
     <Rule Id="SA1505" Action="Error" />
     <Rule Id="SA1507" Action="Error" />
     <Rule Id="SA1508" Action="Error" />
-    <Rule Id="SA1513" Action="Error" />
     <Rule Id="SA1512" Action="None" />
+    <Rule Id="SA1513" Action="Error" />
     <Rule Id="SA1515" Action="None" />
     <Rule Id="SA1516" Action="None" />
     <Rule Id="SA1517" Action="Error" />
@@ -79,5 +78,56 @@
     <Rule Id="SA1633" Action="None" />
     <Rule Id="SA1649" Action="None" />
     <Rule Id="SA1652" Action="None" />
+  </Rules>
+  <Rules AnalyzerId="xunit.analyzers" RuleNamespace="xunit.analyzers">
+    <Rule Id="xUnit1000" Action="None" />
+    <Rule Id="xUnit1001" Action="None" />
+    <Rule Id="xUnit1002" Action="None" />
+    <Rule Id="xUnit1003" Action="None" />
+    <Rule Id="xUnit1004" Action="None" />
+    <Rule Id="xUnit1005" Action="None" />
+    <Rule Id="xUnit1006" Action="None" />
+    <Rule Id="xUnit1007" Action="None" />
+    <Rule Id="xUnit1008" Action="None" />
+    <Rule Id="xUnit1009" Action="None" />
+    <Rule Id="xUnit1010" Action="None" />
+    <Rule Id="xUnit1011" Action="None" />
+    <Rule Id="xUnit1012" Action="None" />
+    <Rule Id="xUnit1013" Action="None" />
+    <Rule Id="xUnit1014" Action="None" />
+    <Rule Id="xUnit1015" Action="None" />
+    <Rule Id="xUnit1016" Action="None" />
+    <Rule Id="xUnit1017" Action="None" />
+    <Rule Id="xUnit1018" Action="None" />
+    <Rule Id="xUnit1019" Action="None" />
+    <Rule Id="xUnit1020" Action="None" />
+    <Rule Id="xUnit1021" Action="None" />
+    <Rule Id="xUnit1022" Action="None" />
+    <Rule Id="xUnit1023" Action="None" />
+    <Rule Id="xUnit1024" Action="None" />
+    <Rule Id="xUnit1025" Action="None" />
+    <Rule Id="xUnit1026" Action="None" />
+    <Rule Id="xUnit2000" Action="None" />
+    <Rule Id="xUnit2001" Action="None" />
+    <Rule Id="xUnit2002" Action="None" />
+    <Rule Id="xUnit2003" Action="None" />
+    <Rule Id="xUnit2004" Action="None" />
+    <Rule Id="xUnit2005" Action="None" />
+    <Rule Id="xUnit2006" Action="None" />
+    <Rule Id="xUnit2007" Action="None" />
+    <Rule Id="xUnit2008" Action="None" />
+    <Rule Id="xUnit2009" Action="None" />
+    <Rule Id="xUnit2010" Action="None" />
+    <Rule Id="xUnit2011" Action="None" />
+    <Rule Id="xUnit2012" Action="None" />
+    <Rule Id="xUnit2013" Action="None" />
+    <Rule Id="xUnit2014" Action="None" />
+    <Rule Id="xUnit2015" Action="None" />
+    <Rule Id="xUnit2016" Action="None" />
+    <Rule Id="xUnit2017" Action="None" />
+    <Rule Id="xUnit2018" Action="None" />
+    <Rule Id="xUnit2019" Action="None" />
+    <Rule Id="xUnit3000" Action="None" />
+    <Rule Id="xUnit3001" Action="None" />
   </Rules>
 </RuleSet>
