@@ -4,23 +4,21 @@ using System.Text;
 
 namespace OOStepByStepTest
 {
+    using OOPractice;
     using OOStepByStep;
     using Xunit;
 
     public class ConsoleTest
     {
         [Fact]
-        public void Test_Console()
+        public void Should_return_message_when_speed_and_carname()
         {
-            // given
-            var fakeOutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeOutput));
-
-            // when
-            new Class1().Print();
-
-            // then
-            Assert.Equal("console\r\n", fakeOutput.ToString());
+            //given
+            Person person = new Person("Tom", 21);
+            //when
+            string message = person.Introduce();
+            //then
+            Assert.Equal("My name is Tom. I am 21 years old.", message);
         }
     }
 }
