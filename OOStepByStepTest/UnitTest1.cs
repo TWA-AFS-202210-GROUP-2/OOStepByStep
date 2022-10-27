@@ -67,7 +67,7 @@ namespace OOStepByStepTest
             Teacher teacher = new Teacher(name, age);
             class2.addTeacher(teacher);
             // when
-            string ans = "My name is Amy. I am 30 years old. I am a teacher class 2.";
+            string ans = "My name is Amy. I am 30 years old. I am a teacher of class 2.";
             string msg = teacher.IntroduceSelf();
 
             // then
