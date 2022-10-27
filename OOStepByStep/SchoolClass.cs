@@ -20,5 +20,10 @@ namespace OOStepByStep
         {
             StudentList.Add(student);
         }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            this.Teacher = teacher;
+        }
     }
 }
