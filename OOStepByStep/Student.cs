@@ -12,9 +12,19 @@ namespace OOStepByStep
         {
         }
 
-        public override string Introduce()
+        public string SchoolClassName { get; set; } = string.Empty;
+        public void AddToClass(SchoolClass schoolClass)
         {
-            return $"My name is {Name}. I am {Age} years old. I am a student.";
+            schoolClass.AddStudent(this);
+            SchoolClassName = schoolClass.Name;
+        }
+
+        public new string Introduce()
+        {
+            string introduceMessage = (SchoolClassName != string.Empty) ?
+                $"{base.Introduce()} I am a student of class {SchoolClassName}."
+                : $"{base.Introduce()} I am a student.";
+            return introduceMessage;
         }
     }
 }
