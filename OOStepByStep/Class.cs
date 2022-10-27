@@ -22,5 +22,10 @@ namespace OOStepByStep
             //students.Add(student);
             student.JionClass(this.className);
         }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            teacher.JionClass(this.className);
+        }
     }
 }
