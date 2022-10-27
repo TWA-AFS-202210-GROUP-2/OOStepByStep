@@ -24,9 +24,17 @@ namespace OOStepByStepTest
         [Fact]
         public void Should_Return_info_when_intruduce_given_a_student()
         {
-            Student person = new Student("Tom", 21);
+            Student person = new ("Tom", 21);
             string msgPerson = person.Introduce();
-            Assert.Equal("My name is Tom. I am 18 years old. I am a student.", msgPerson);
+            Assert.Equal("My name is Tom. I am 21 years old. I am a student.", msgPerson);
+        }
+
+        [Fact]
+        public void Should_Return_info_when_intruduce_given_a_teacher()
+        {
+            Teacher person = new Teacher("Amy", 30);
+            string msgPerson = person.Introduce();
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", msgPerson);
         }
     }
 }
