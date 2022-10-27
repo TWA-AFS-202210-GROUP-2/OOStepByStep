@@ -17,7 +17,7 @@ namespace OOStepByStep
         public string Name { get; set; }
         public int Age { get; set; }
 
-        public string Introduce()
+        public virtual string Introduce()
         {
             return $"My name is {Name}. I am {Age} years old.";
         }
