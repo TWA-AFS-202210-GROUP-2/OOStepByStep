@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace OOStepByStep
 {
-    public class Teacher : Person
+    public class Student : Person
     {
-        public Teacher(string name, int age) : base(name, age)
+        public Student(string name, int age) : base(name, age)
         {
         }
 
         public override string Introduction()
         {
-            return base.Introduction() + " I am a teacher.";
+            return base.Introduction() + " I am a student.";
         }
     }
 }
