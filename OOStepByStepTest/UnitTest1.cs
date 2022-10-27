@@ -92,6 +92,44 @@ namespace OOStepByStepTest
 
             Assert.Equal(ans, msg);
         }
+        [Fact]
+        public void Should_return_greet_msg_when_given_class_new_student()
+        {
+            //given
+            Teacher teacher = new Teacher("Amy",30);
+            string name = "Tom";
+            int age = 18;
+            string className = "class 2";
+            Classroom class2 = new Classroom(className);
+            Student student = new Student(name, age);
+            class2.addTeacher(teacher);
 
+            // when
+            string msg = class2.addStudent(student);
+            string ans = "My name is Amy. I am 30 years old. I am a teacher of class 2. Welcome Tom join class 2.";
+            // then
+            Assert.Equal(ans, msg);
+        }
+
+
+        [Fact]
+            public void Should_stus_return_greet_msg_when_given_class_new_student()
+        {
+            //given
+           
+            string name = "Tom";
+            int age = 18;
+            string className = "class 2";
+            Classroom class2 = new Classroom(className);
+            Student student = new Student(name, age);
+            Student newstudent = new Student("Jim", 100);
+
+            string msg_1 = class2.addStudent(student);
+            string msg_2 = class2.addStudent(newstudent);
+            // when
+            string ans = "My name is Tom. I am 18 years old. I am a student of class 2. Welcome Jim join class 2.";
+            // then
+            Assert.Equal(ans, msg_2);
+        }
     }
 }

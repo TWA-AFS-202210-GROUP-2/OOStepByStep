@@ -1,3 +1,5 @@
+using System;
+
 namespace OOStepByStep;
 
 public class Student : Person
@@ -19,6 +21,11 @@ public class Student : Person
     public void setClass(Classroom @class)
     {
         myClassroom = @class;
+    }
+
+    public string greetNewStudent(Student student)
+    {
+        return IntroduceSelf() + $" Welcome {student.name} join {myClassroom.className}.";
     }
 
     public Classroom myClassroom { get; set; }

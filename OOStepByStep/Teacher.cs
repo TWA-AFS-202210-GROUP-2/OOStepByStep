@@ -4,7 +4,7 @@ namespace OOStepByStep;
 
 public class Teacher : Person
 {
-    Classroom myClassroom = null;
+    public Classroom myClassroom = null;
     public Teacher(string name, int age) : base(name, age)
     {
     }
@@ -18,9 +18,15 @@ public class Teacher : Person
         }
         return msg;
     }
+    
 
     public void setClass(Classroom @class)
     {
         myClassroom = @class;
+    }
+
+    public string greetNewStudent(Student student)
+    {
+        return IntroduceSelf() + $" Welcome {student.name} join {myClassroom.className}.";
     }
 }
