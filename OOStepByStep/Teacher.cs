@@ -20,8 +20,14 @@
             }
             else
             {
-                return $"{baseIntroduction} I am a {role}.I am a teacher of class {className}.";
+                return $"{baseIntroduction} I am a teacher of class {className}.";
             }
+        }
+
+        public string IntroduceForWelcome(Student newStudent)
+        {
+            var baseIntroduction = Introduce();
+            return $"{baseIntroduction} Welcome {newStudent.GetName()} join class 2.";
         }
     }
 }

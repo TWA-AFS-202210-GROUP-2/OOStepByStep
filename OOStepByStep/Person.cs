@@ -15,5 +15,11 @@
         {
             return $"My name is {name}. I am {age} years old.";
         }
+
+        /*public string Name { get => name; set => name = value; }*/
+        public string GetName()
+        {
+            return name;
+        }
     }
 }
