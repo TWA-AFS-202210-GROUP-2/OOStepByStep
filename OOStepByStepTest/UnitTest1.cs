@@ -31,7 +31,7 @@ namespace OOStepByStepTest
             string name = "Tom";
             int age = 18;
             string titleName = "student";
-            Student student = new Student(name, age, titleName);
+            Student student = new Student(name, age);
             // when
             string ans = "My name is Tom. I am 18 years old. I am a student.";
             string msg = student.IntroduceSelf();
@@ -40,18 +40,57 @@ namespace OOStepByStepTest
 
             Assert.Equal(ans, msg);
         }
-    }
-
-    public class Student : Person
-    {
-        public Student(string name, int age, string titleName) : base(name, age)
+        [Fact]
+        public void Should_return_msg_when_introduce_given_info_plus_teacher()
         {
+            //given
+            string name = "Amy";
+            int age = 30;
+            string titleName = "student";
+            Teacher teacher = new Teacher(name, age);
+            // when
+            string ans = "My name is Amy. I am 30 years old. I am a teacher.";
+            string msg = teacher.IntroduceSelf();
+
+            // then
+
+            Assert.Equal(ans, msg);
         }
-
-        public string IntroduceSelf()
+        [Fact]
+        public void Should_return_msg_when_introduce_given_class_info_plus_teacher()
         {
-            string msg = $"My name is {this.name}. I am {this.age.ToString()} years old. I am a student.";
-            return msg;
+            //given
+            string name = "Amy";
+            int age = 30;
+            string className = "class 2";
+            Classroom class2 = new Classroom(className);
+            Teacher teacher = new Teacher(name, age);
+            class2.addTeacher(teacher);
+            // when
+            string ans = "My name is Amy. I am 30 years old. I am a teacher class 2.";
+            string msg = teacher.IntroduceSelf();
+
+            // then
+
+            Assert.Equal(ans, msg);
+        }
+        [Fact]
+        public void Should_return_msg_when_introduce_given_class_info_plus_student()
+        {
+            //given
+            string name = "Tom";
+            int age = 18;
+            string className = "class 2";
+            Classroom class2 = new Classroom(className);
+            Student student = new Student(name, age);
+            class2.addStudent(student);
+            // when
+            string ans = "My name is Tom. I am 18 years old. I am a student of class 2.";
+            string msg = student.IntroduceSelf();
+
+            // then
+
+            Assert.Equal(ans, msg);
         }
 
     }
