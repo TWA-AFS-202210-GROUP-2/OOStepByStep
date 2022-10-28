@@ -10,17 +10,72 @@ namespace OOStepByStepTest
     public class ConsoleTest
     {
         [Fact]
-        public void Test_Console()
+        public void Should_return_introduction_when_person_given_name_age()
         {
             // given
-            var fakeOutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeOutput));
+            var person = new Person("Tom", 18);
 
             // when
-            new Class1().Print();
+            var introductionString = person.Introduction();
 
             // then
-            Assert.Equal("console\r\n", fakeOutput.ToString());
+            Assert.Equal("My name is Tom. I am 18 years old.", introductionString);
+        }
+
+        [Fact]
+        public void Should_return_introduction_when_student_given_name_age()
+        {
+            // given
+            var student = new Student("Tom", 18);
+
+            // when
+            var introductionString = student.Introduction();
+
+            // then
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student.", introductionString);
+        }
+
+        [Fact]
+        public void Should_return_introduction_when_teacher_given_name_age()
+        {
+            // given
+            var teacher = new Teacher("Amy", 30);
+
+            // when
+            var introductionString = teacher.Introduction();
+
+            // then
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", introductionString);
+        }
+
+        [Fact]
+        public void Should_return_introduction_when_student_given_class()
+        {
+            // given
+            var student = new Student("Tom", 18);
+            var className = new Class("class 2");
+
+            // when
+            className.AddStudent(student);
+            var introductionString = student.Introduction();
+
+            // then
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 2.", introductionString);
+        }
+
+        [Fact]
+        public void Should_return_introduction_when_teacher_given_class()
+        {
+            // given
+            var teacher = new Teacher("Amy", 30);
+            var className = new Class("class 2");
+
+            // when
+            className.AddTeacher(teacher);
+            var introductionString = teacher.Introduction();
+
+            // then
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", introductionString);
         }
     }
 }
