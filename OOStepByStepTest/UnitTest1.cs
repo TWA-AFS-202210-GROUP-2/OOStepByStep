@@ -44,5 +44,27 @@ namespace OOStepByStepTest
             //then
             Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", result);
         }
+
+        [Fact]
+        public void Should_return_personal_introduction_when_given_student_and_class_info()
+        {
+            //given
+            var person = new Student("Tom", 18, "class 2");
+            //when
+            var result = person.IntroduceOneself();
+            //then
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 2.", result);
+        }
+
+        [Fact]
+        public void Should_return_personal_introduction_when_given_teacher_and_class_info()
+        {
+            //given
+            var person = new Teacher("Amy", 30, "class 2");
+            //when
+            var result = person.IntroduceOneself();
+            //then
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", result);
+        }
     }
 }

@@ -12,9 +12,16 @@ namespace OOStepByStep
         {
         }
 
-        public string IntroduceOneself()
+        public Teacher(string name, int age, string classNumber) : base(name, age, classNumber)
         {
-            return $"My name is {Name}. I am {Age} years old. I am a teacher.";
+        }
+
+        public override string IntroduceOneself()
+        {
+            if (this.ClassNumber == string.Empty)
+            { return $"My name is {Name}. I am {Age} years old. I am a teacher."; }
+            else
+            { return $"My name is {Name}. I am {Age} years old. I am a teacher of {ClassNumber}."; }
         }
     }
 }
