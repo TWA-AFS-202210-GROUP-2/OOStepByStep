@@ -20,6 +20,11 @@ namespace OOStepByStep
 
         public override string Introduction()
         {
+            if (this.className == null)
+            {
+                return base.Introduction() + $" I am a student.";
+            }
+
             return base.Introduction() + $" I am a student of {this.className}.";
         }
     }
